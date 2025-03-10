@@ -1,0 +1,1 @@
+yay -S swayosd-git waypaper wlogout clipse hyprlock hypridle starship nwg-look
