@@ -1,1 +1,1 @@
-yay -S waypaper wlogout clipse hyprlock hypridle starship nwg-look
+yay -S waypaper wlogout clipse hyprlock hypridle starship nwg-look hyprshot
