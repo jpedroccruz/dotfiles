@@ -4,7 +4,7 @@
     "margin-left": 20,
     "margin-bottom": 1,
     "margin-right": 20,
-    "padding-right": 5,
+    "padding-right": 20,
     "mode": "dock",
     "position": "top",
     "gtk-layer-shell": true,
@@ -70,7 +70,8 @@
     "format-icons": {
         "activated": "󰥔",
         "deactivated": ""
-    }
+    },
+    "on-click": "swaync-client -d"
     },
     // Taskbar
     "wlr/taskbar": {
