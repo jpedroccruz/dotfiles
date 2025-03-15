@@ -21,7 +21,7 @@
     "modules-center": [
         "custom/updater",
         "cpu",
-	"memory",
+	    "memory",
         "disk",
         "custom/xbox_battery"
     ],
@@ -37,15 +37,15 @@
     "tooltip": true,
     "scroll-step": 5,
     "format": "{icon} {volume}%",
-    "format-muted": "<span color='#7aa2f7'> </span> Muted",
+    "format-muted": "<span color='#dc1c13'> </span> Muted",
     "on-click": "amixer sset Master toggle",
     "on-click-right": "pavucontrol",
     "tooltip-format": "{desc}",
     "format-icons": {
         "default": [
-            "<span color='#7aa2f7'></span>",
-            "<span color='#7aa2f7'></span>",
-            "<span color='#7aa2f7'></span>"
+            "<span color='#dc1c13'></span>",
+            "<span color='#dc1c13'></span>",
+            "<span color='#dc1c13'></span>"
         ]
     
     }
