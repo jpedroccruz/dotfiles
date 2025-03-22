@@ -9,7 +9,7 @@
     "position": "top",
     "gtk-layer-shell": true,
     "reload_style_on_change": true,
-
+    
     //Modules layout
 
     "modules-left": [
@@ -102,12 +102,11 @@
     "network": {
         "justify": "center",
         "format-ethernet": "󰈀  {ifname}",
-        "tooltip-format-ethernet": "{ifname}",
         "format-wifi": "󰤨  {essid}",
-        "tooltip-format-wifi": "{essid} {frequency} {signalStrength}",
-        "format-disconnected": "Disconnected",
+        "family": "ipv4",
+        "format-disconnected": "⚠ Disconnected",
         "tooltip-format-disconnected": "Disconnected",
-	"on-click": "kitty -e nmtui"
+        "on-click": "kitty -e nmtui"
     }, 
     "backlight": {
 	"device": "intel_backlight",
@@ -117,21 +116,22 @@
 	"on-scroll-down": "brightnessctl set 10%-"
     },
     "battery": {
+	"interval": 1,
         "states": {
-            "good": 75,
-            "warning": 30,
-            "critical": 10
+            "critical": 10,
+	    "warning": 30,
+	    "good": 75
         },
         "format": "{icon}  <span color='#F1F1F1'>{capacity}%</span>",
         "format-charging": "<span color='#9ece6a'></span> <span color='#F1F1F1'>{capacity}%</span>",
         "format-plugged": " <span color='#F1F1F1'>{capacity}</span>%",
         "format-alt": "<span color='#F1F1F1'>{time}</span> {icon}",
         "format-icons": [
-            "<span color='#f7768e'></span>", 
-            "<span color='#e0af68'></span>", 
-            "<span color='#e0af68'></span>", 
-            "<span color='#9ece6a'></span>", 
-            "<span color='#9ece6a'></span>"
+            "<span color='#ff0000'></span>", 
+            "<span color='#ff6f00'></span>", 
+            "<span color='#d4ad00'></span>", 
+            "<span color='#6ec200'></span>", 
+            "<span color='#03b000'></span>"
         ]
     },
     
