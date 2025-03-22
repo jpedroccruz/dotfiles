@@ -182,7 +182,7 @@
     "disk": {
         "format": "<span color='#e0af68'>󰋊</span> {used}",
         "interval": 1,
-        "on-click": "gnome-disks",
+        "on-click": "filelight",
         "on-click-right": "killall gnome-disks"
     },
 
