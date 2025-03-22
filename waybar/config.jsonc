@@ -15,18 +15,21 @@
     "modules-left": [
         "custom/power",
         "idle_inhibitor",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+	"tray"
     ],
 	
     "modules-center": [
         "custom/updater",
         "cpu",
-	    "memory",
+	"memory",
         "disk",
         "custom/xbox_battery"
     ],
 
     "modules-right": [
+	"backlight",
+	"battery",
         "network",
         "pulseaudio",
         "clock",
@@ -36,8 +39,8 @@
     "pulseaudio": {
     "tooltip": true,
     "scroll-step": 5,
-    "format": "{icon} {volume}%",
-    "format-muted": "<span color='#dc1c13'> </span> Muted",
+    "format": "{icon}  {volume}%",
+    "format-muted": "<span color='#dc1c13'> </span>Muted",
     "on-click": "amixer sset Master toggle",
     "on-click-right": "pavucontrol",
     "tooltip-format": "{desc}",
@@ -98,23 +101,24 @@
     },
     "network": {
         "justify": "center",
-        "format-ethernet": "󰈀",
+        "format-ethernet": "󰈀  {ifname}",
         "tooltip-format-ethernet": "{ifname}",
-        "format-wifi": "󰤨",
+        "format-wifi": "󰤨  {essid}",
         "tooltip-format-wifi": "{essid} {frequency} {signalStrength}",
         "format-disconnected": "Disconnected",
-        "tooltip-format-disconnected": "Disconnected"
+        "tooltip-format-disconnected": "Disconnected",
+	"on-click": "kitty -e nmtui"
     }, 
-	"backlight": {
-		"tooltip": false,
-		"format": " {}%",
-		"interval":1,
-        "on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5"
-	},
+    "backlight": {
+	"device": "intel_backlight",
+	"format": "{icon} {percent}%",
+	"format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕"],
+       	"on-scroll-up": "brightnessctl set 10%+",
+	"on-scroll-down": "brightnessctl set 10%-"
+    },
     "battery": {
         "states": {
-            "good": 95,
+            "good": 75,
             "warning": 30,
             "critical": 10
         },
