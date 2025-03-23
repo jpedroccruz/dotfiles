@@ -118,18 +118,18 @@ window#waybar.hidden {
     border-radius: 5px;
     transition: none;
     font-weight: bold;
-    color: #161320;
+    color: #f1f1f1;
     background: rgba(28, 32, 44, 0.428);
 }
 
 #battery.charging, #battery.plugged {
     color: #161320;
-    background-color: transparent;
+    background-color: rgba(28, 32, 44, 0.428);
 }
 
 #battery.critical:not(.charging) {
     background-color: #B5E8E0;
-    color: #161320;
+    color: #db0000;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -210,7 +210,7 @@ window#waybar.hidden {
 #tray {
    margin-top: 6px;
     margin-left: 8px;
-    padding-left: 15px;
+    padding-left: 10px;
     margin-bottom: 6px;
     padding-right: 10px;
     border-radius: 5px;
@@ -303,8 +303,9 @@ window#waybar.hidden {
 #custom-notification {
     margin-top: 6px;
     margin-left: 8px;
+    margin-right: 8px;
     padding-left: 5px;
-    padding-right: 20px;
+    padding-right: 15px;
     margin-bottom: 6px;
     border-radius: 5px;
     font-weight: bold;
