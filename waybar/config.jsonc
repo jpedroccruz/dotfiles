@@ -109,7 +109,7 @@
         "justify": "center",
         "format-ethernet": "󰈀  {ifname}",
         "format-wifi": "󰤨  {essid} {signalStrength}%",
-	"tooltip-format-wifi": "{ifname} CONNECTED",
+    	"tooltip-format-wifi": "{ifname} CONNECTED",
         "format-disconnected": "⚠ Disconnected",
         "tooltip-format-disconnected": "(No IP)",
         "on-click": "kitty -e nmtui"
@@ -119,8 +119,8 @@
 	    "device": "intel_backlight",
 	    "format": "{icon} {percent}%",
 	    "format-icons": ["🌑", "🌒", "🌓", "🌔", "🌕"],
-       	"on-scroll-up": "brightnessctl set 10%+",
-	    "on-scroll-down": "brightnessctl set 10%-"
+       	"on-scroll-up": "brightnessctl set 5%+",
+	    "on-scroll-down": "brightnessctl set 5%-"
     },
 
     "battery": {
@@ -154,10 +154,9 @@
     },
       
     "clock": {
-        "format": "{:%H:%M - %d-%m}",
+        "format": "{:%H:%M - %d/%m/%y}",
         "rotate": 0,
-        "format-alt": "{:%R 󰃭 %d·%m·%y}",
-        "tooltip-format": "<tt>{calendar}</tt>",
+        "on-click": "gnome-calendar",
         "calendar": {
             "mode": "month",
             "mode-mon-col": 3,
